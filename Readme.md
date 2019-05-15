@@ -8,7 +8,7 @@ V1.1
 1.	Added Attention, Meditation, alpha, delta, theta wave signal but for now sine wave and cose wave are being graphed
 2. 	Keyboard design is made and input text from keyboard.
 
-project in ongoing
+project is ongoing
 =================
 
 WHY?
@@ -18,4 +18,4 @@ Some people who are paralised and cannot walk and talk this project is for them 
 For more info 
 ================
 kushalluitel3502@gmail.com 
-\
+
