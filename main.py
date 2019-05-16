@@ -7,6 +7,7 @@ import matplotlib as plt
 from matplotlib.figure import Figure
 import  numpy  as  np
 import  random
+from lineEdit import QLabel
 #import mindwave, time, subprocess
 
 #headset = mindwave.Headset('')
@@ -38,15 +39,6 @@ class  MatplotlibWidget ( QMainWindow ):
         #self . pushButton_generate_random_signal . clicked . connect ( self . update_graph )
         self.update_graph()
         self.addToolBar ( NavigationToolbar(self.MplWidget.canvas,self))
-         # Create textbox
-        self.textbox = QLineEdit(self)
-        self.textbox.move(35, 500)
-        self.textbox.resize(590,71)
-
-        def textbox (self, output):
-            self.textboxValue = self.textbox.text()
-            a=output
-            self.textbox.setText(output)
 
 
         self.button_1n = 1
@@ -137,126 +129,118 @@ class  MatplotlibWidget ( QMainWindow ):
     def button_click1(self):
         #self.textboxValue = self.textbox.text()
         #self.textbox.setText(str(self.button_1n))
-        self.textbox (self.button_1)
+        self.QLabel.setText(str(self.button_1n))
 
 
     def button_click2(self):
         #self.textboxValue = self.textbox.text()
         #self.textbox.setText(str(self.button_2n))
-        self.textbox(self.button_2)
+        self.QLabel.setText(str(self.button_2n))
 
     def button_click3(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_3n))
+        self.QLabel.setText(str(self.button_3n))
 
     def button_click4(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_4n))
+        self.QLabel.setText(str(self.button_4n))
 
     def button_click5(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_5n))
+        self.QLabel.setText(str(self.button_5n))
 
     def button_click6(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_6n))
+        self.QLabel.setText(str(self.button_6n))
 
     def button_click7(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_7n))
+        self.QLabel.setText(str(self.button_7n))
 
     def button_click8(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_8n))
+        self.QLabel.setText(str(self.button_8n))
 
     def button_click9(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_9n))
+        self.QLabel.setText(str(self.button_9n))
 
     def button_click0(self):
-        self.textboxValue = self.textbox.text()
-        self.textbox.setText(str(self.button_0n))
+        self.QLabel.setText(str(self.button_0n))
 
     def button_clicka(self):
-        print(self.button_an)
+        self.QLabel.setText(str(self.button_an))
 
     def button_clickb(self):
-        print(self.button_bn)
+        self.QLabel.setText(str(self.button_bn))
 
     def button_clickc(self):
-        print(self.button_cn)
+        self.QLabel.setText(str(self.button_cn))
 
     def button_clickd(self):
-        print(self.button_dn)
+        self.QLabel.setText(str(self.button_dn))
 
     def button_clicke(self):
-        print(self.button_en)
+        self.QLabel.setText(str(self.button_en))
 
     def button_clickf(self):
-        print(self.button_fn)
+        self.QLabel.setText(str(self.button_fn))
 
     def button_clickg(self):
-        print(self.button_gn)
+        self.QLabel.setText(str(self.button_gn))
 
     def button_clickh(self):
-        print(self.button_hn)
+        self.QLabel.setText(str(self.button_hn))
 
     def button_clicki(self):
-        print(self.button_in)
+        self.QLabel.setText(str(self.button_in))
 
     def button_clickj(self):
-        print(self.button_jn)
+        self.QLabel.setText(str(self.button_jn))
 
     def button_clickk(self):
-        print(self.button_kn)
+        self.QLabel.setText(str(self.button_kn))
 
     def button_clickl(self):
-        print(self.button_ln)
+        self.QLabel.setText(str(self.button_ln))
 
     def button_clickm(self):
-        print(self.button_mn)
+        self.QLabel.setText(str(self.button_mn))
 
     def button_clickn(self):
-        print(self.button_nn)
+        self.QLabel.setText(str(self.button_nn))
 
     def button_clicko(self):
-        print(self.button_on)
+        self.QLabel.setText(str(self.button_on))
 
     def button_clickp(self):
-        print(self.button_pn)
+        self.QLabel.setText(str(self.button_pn))
 
     def button_clickq(self):
-        print(self.button_qn)
+        self.QLabel.setText(str(self.button_qn))
 
     def button_clickr(self):
-        print(self.button_rn)
+        self.QLabel.setText(str(self.button_rn))
 
     def button_clicks(self):
-        print(self.button_sn)
+        self.QLabel.setText(str(self.button_sn))
 
     def button_clickt(self):
-        print(self.button_tn)
+        self.QLabel.setText(str(self.button_tn))
 
     def button_clicku(self):
-        print(self.button_un)
+        self.QLabel.setText(str(self.button_un))
 
     def button_clickv(self):
-        print(self.button_vn)
+        self.QLabel.setText(str(self.button_vn))
 
     def button_clickw(self):
-        print(self.button_wn)
+        self.QLabel.setText(str(self.button_wn))
 
     def button_clickx(self):
-        print(self.button_xn)
+        self.QLabel.setText(str(self.button_xn))
 
     def button_clicky(self):
-        print(self.button_yn)
+        self.QLabel.setText(str(self.button_yn))
 
     def button_clickz(self):
-        print(self.button_zn)
+        self.QLabel.setText(str(self.button_zn))
 
     def button_clickspace(self):
-        print(self.button_spacen)
+        self.QLabel.setText(str(self.button_spacen))
     '''
     def button_click5(self):
         print(self.button_5n)

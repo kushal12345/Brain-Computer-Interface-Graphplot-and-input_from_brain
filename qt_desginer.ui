@@ -684,6 +684,19 @@ color: rgb(0, 0, 0);</string>
      <string>0</string>
     </property>
    </widget>
+   <widget class="QLabel" name="QLabel">
+    <property name="geometry">
+     <rect>
+      <x>47</x>
+      <y>427</y>
+      <width>891</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
