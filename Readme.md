@@ -8,6 +8,10 @@ V1.1
 1.	Added Attention, Meditation, alpha, delta, theta wave signal but for now sine wave and cose wave are being graphed
 2. 	Keyboard design is made and input text from keyboard.
 
+V1.2
+========
+1. keyboard working 
+
 project is ongoing
 =================
 
