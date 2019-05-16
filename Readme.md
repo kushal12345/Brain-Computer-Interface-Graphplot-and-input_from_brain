@@ -8,14 +8,22 @@ V1.1
 1.	Added Attention, Meditation, alpha, delta, theta wave signal but for now sine wave and cose wave are being graphed
 2. 	Keyboard design is made and input text from keyboard.
 
-project in ongoing
+project is ongoing
 =================
 
 WHY?
 ======
 Some people who are paralised and cannot walk and talk this project is for them to solve their daily life problems.
 
+USAGE
+=======
+1. Install python and pyqt5 for you linux computer
+2. Connect your Neurosky sensors on laptop
+3. On you terminal 
+    python main.py
+    
+<U>Note</U>: This is for linux Operating system.     
 For more info 
 ================
 kushalluitel3502@gmail.com 
-\
+
