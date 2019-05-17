@@ -14,7 +14,7 @@ class  MplWidget ( QWidget ):
         self.animation= animation
         self.canvas.figure = plt.figure()
         self.canvas.axes  =  self.canvas.figure.add_subplot( 1,1,1 )
-        
+
     def set_layout(self):
         self.setLayout(self.vertical_layout)
         self.vertical_layout.addWidget ( self . canvas )
