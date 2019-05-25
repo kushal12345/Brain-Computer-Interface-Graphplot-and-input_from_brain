@@ -10,7 +10,11 @@ V1.1
 
 V1.2
 ========
-1. keyboard working 
+1. keyboard working partially
+
+V1.3
+========
+1. Fully Functional working keyboard
 
 project is ongoing
 =================
