@@ -1,13 +1,13 @@
 import time
 
 class keyboard:
-    def round():
+    def round(self):
         x  = [1,2,3,4,5]
         for i in x:
             print(i)
             time.sleep(1)
 
-    def loopkey(button,output):
+    def loopkey(self,button, output):
         print("button of keyboard ",button)
         print("output of keyboard",output)
         for i in button:

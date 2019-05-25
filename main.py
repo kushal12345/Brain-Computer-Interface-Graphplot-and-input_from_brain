@@ -383,5 +383,6 @@ buttonpass=widget1.button
 outputpass=widget1.output
 keyboardobj=keyboard()
 keyboardobj.loopkey(buttonpass, outputpass)
-window.show ()
-app . exec_ ()
+keyboardobj.round()
+window.show()
+app . exec_()
