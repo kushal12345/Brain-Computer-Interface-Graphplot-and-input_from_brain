@@ -16,6 +16,10 @@ V1.3
 ========
 1. Fully Functional working keyboard
 
+V1.4
+=======
+1. auto highlighting using thread in pythone
+
 project is ongoing
 =================
 
