@@ -8,6 +8,8 @@ class keyboard:
             time.sleep(1)
 
     def loopkey(button,output):
+        print("button of keyboard ",button)
+        print("output of keyboard",output)
         for i in button:
             for j in output:
                 i.setStyleSheet("background-color: red")

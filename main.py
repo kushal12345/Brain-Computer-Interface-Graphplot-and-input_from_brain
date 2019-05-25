@@ -31,8 +31,6 @@ interval=60
 
 global init
 init = ""
-global buttonloc
-global outputloc
 
 
 class  MatplotlibWidget ( QMainWindow ):
@@ -129,22 +127,8 @@ class  MatplotlibWidget ( QMainWindow ):
         self. button_space.clicked.connect(self.button_clickspace)
         self. button_clear.clicked.connect(self.button_clickclear)
         '''
-        button = [ self.button_1,self.button_2,self.button_3,self.button_4,self.button_5 ]
-        output = [ self.button_click1,self.button_click2,self.button_click3,self.button_click4,self.button_click5]
-        global buttonloc
-        buttonloc = button
-        global outputloc
-        outputloc = output
-
-    def button():
-        global buttonloc
-        x=buttonloc
-        return x
-
-    def output():
-        global outputloc
-        y=outputloc
-        return y
+        self.button = [ self.button_1,self.button_2,self.button_3,self.button_4,self.button_5 ]
+        self.output = [ self.button_click1,self.button_click2,self.button_click3,self.button_click4,self.button_click5]
 
     def keyboardinput(self,output):
         a = output
@@ -394,12 +378,10 @@ class  MatplotlibWidget ( QMainWindow ):
 
 app  =  QApplication ([])
 window  =  MatplotlibWidget ()
-widget1=MatplotlibWidget
+widget1=MatplotlibWidget()
 buttonpass=widget1.button
 outputpass=widget1.output
-print(buttonpass)
-print(outputpass)
-for x in buttonpass:
-    x.clicked.connect(lambda: loopkey(buttonpass, outputpass))
+keyboardobj=keyboard()
+keyboardobj.loopkey(buttonpass, outputpass)
 window.show ()
 app . exec_ ()
