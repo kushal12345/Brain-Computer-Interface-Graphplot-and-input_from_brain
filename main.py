@@ -8,6 +8,8 @@ from matplotlib.figure import Figure
 import  numpy  as  np
 import  random
 from lineEdit import QLabel
+import time
+from keyboard import *
 #import mindwave, time, subprocess
 
 #headset = mindwave.Headset('')
@@ -29,9 +31,11 @@ interval=60
 
 global init
 init = ""
+global buttonloc
+global outputloc
+
 
 class  MatplotlibWidget ( QMainWindow ):
-
 
     def  __init__ ( self ):
         QMainWindow . __init__ ( self )
@@ -81,8 +85,8 @@ class  MatplotlibWidget ( QMainWindow ):
         self.button_yn = 'y'
         self.button_zn = 'z'
         self.button_spacen = ' '
-        #self.button_clearn = '#'
 
+        '''
         self. button_1.clicked.connect(self.button_click1)
         self. button_2.clicked.connect(self.button_click2)
         self. button_3.clicked.connect(self.button_click3)
@@ -124,6 +128,23 @@ class  MatplotlibWidget ( QMainWindow ):
         self. button_z.clicked.connect(self.button_clickz)
         self. button_space.clicked.connect(self.button_clickspace)
         self. button_clear.clicked.connect(self.button_clickclear)
+        '''
+        button = [ self.button_1,self.button_2,self.button_3,self.button_4,self.button_5 ]
+        output = [ self.button_click1,self.button_click2,self.button_click3,self.button_click4,self.button_click5]
+        global buttonloc
+        buttonloc = button
+        global outputloc
+        outputloc = output
+
+    def button():
+        global buttonloc
+        x=buttonloc
+        return x
+
+    def output():
+        global outputloc
+        y=outputloc
+        return y
 
     def keyboardinput(self,output):
         a = output
@@ -288,10 +309,6 @@ class  MatplotlibWidget ( QMainWindow ):
     def button_clickclear(self):
         self.keyboardinputclear()
 
-
-
-
-
     def  update_graph ( self ):
         self.animation = self.MplWidget.animation.FuncAnimation(self.MplWidget.canvas.axes.figure, self.animate, frames=n, interval=interval)
         self.MplWidget.show()
@@ -374,7 +391,14 @@ class  MatplotlibWidget ( QMainWindow ):
         return self.animation_5
 
 
+
 app  =  QApplication ([])
 window  =  MatplotlibWidget ()
-window . show ()
+widget1=MatplotlibWidget
+buttonpass=widget1.button
+outputpass=widget1.output
+print(buttonpass)
+connect(lambda: loopkey(widget1.button,widget1.output)
+
+window.show ()
 app . exec_ ()
