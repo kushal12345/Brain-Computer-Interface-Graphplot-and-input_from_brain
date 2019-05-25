@@ -398,7 +398,8 @@ widget1=MatplotlibWidget
 buttonpass=widget1.button
 outputpass=widget1.output
 print(buttonpass)
-connect(lambda: loopkey(widget1.button,widget1.output)
-
+print(outputpass)
+for x in buttonpass:
+    x.clicked.connect(lambda: loopkey(buttonpass, outputpass))
 window.show ()
 app . exec_ ()
