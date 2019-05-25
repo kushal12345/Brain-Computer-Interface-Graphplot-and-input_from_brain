@@ -1,18 +1,18 @@
 import time
+from matplotlib import pyplot as plt
+class Keyboard():
 
-class keyboard:
-    def round(self):
-        x  = [1,2,3,4,5]
-        for i in x:
-            print(i)
-            time.sleep(1)
+    def loopkey(self,buttons, outputs,t):
+        print("{0} sec delay".format(t))
 
-    def loopkey(self,button, output):
-        print("button of keyboard ",button)
-        print("output of keyboard",output)
-        for i in button:
-            for j in output:
-                i.setStyleSheet("background-color: red")
-                i.clicked.connect(j)
-                print(j)
-                time.sleep(0.5)
+        for button,output  in zip(buttons,outputs):
+            button.setStyleSheet("background-color: red")
+            #button.clicked.connect(output)
+            '''
+            if(headset.single_eyeblink):
+                button.connect(output)
+            elif(headet.double_eyeblink):
+                #restart loop from top        
+            '''
+            time.sleep(t)
+            button.setStyleSheet("background-color: white")

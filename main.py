@@ -9,7 +9,8 @@ import  numpy  as  np
 import  random
 from lineEdit import QLabel
 import time
-from keyboard import *
+from keyboard import Keyboard
+import threading
 #import mindwave, time, subprocess
 
 #headset = mindwave.Headset('')
@@ -127,8 +128,18 @@ class  MatplotlibWidget ( QMainWindow ):
         self. button_space.clicked.connect(self.button_clickspace)
         self. button_clear.clicked.connect(self.button_clickclear)
         '''
-        self.button = [ self.button_1,self.button_2,self.button_3,self.button_4,self.button_5 ]
-        self.output = [ self.button_click1,self.button_click2,self.button_click3,self.button_click4,self.button_click5]
+        self.button = [ self.button_1,self.button_2,self.button_3,self.button_4,self.button_5,self.button_6,self.button_7,self.button_8,self.button_9,self.button_0,
+                        self.button_a,self.button_b,self.button_c,self.button_d,self.button_e,self.button_f,self.button_g,self.button_h,self.button_i,self.button_j,
+                        self.button_k,self.button_l,self.button_m,self.button_n,self.button_o,self.button_p,self.button_q,self.button_r,self.button_s,self.button_t,
+                        self.button_u,self.button_v,self.button_w,self.button_x,self.button_y,self.button_z,self.button_space,self.button_clear]
+        self.output = [ self.button_click1,self.button_click2,self.button_click3,self.button_click4,self.button_click5,
+                        self.button_click6,self.button_click7,self.button_click8,self.button_click9,self.button_click0,
+                        self.button_clicka,self.button_clickb,self.button_clickc,self.button_clickd,self.button_clicke,
+                        self.button_clickf,self.button_clickg,self.button_clickh,self.button_clicki,self.button_clickj,
+                        self.button_clickk,self.button_clickl,self.button_clickm,self.button_clickn,self.button_clicko,
+                        self.button_clickp,self.button_clickq,self.button_clickr,self.button_clicks,self.button_clickt,
+                        self.button_clicku,self.button_clickv,self.button_clickw,self.button_clickx,self.button_clicky,
+                        self.button_clickz,self.button_clickspace,self.button_clickclear]
 
     def keyboardinput(self,output):
         a = output
@@ -378,11 +389,12 @@ class  MatplotlibWidget ( QMainWindow ):
 
 app  =  QApplication ([])
 window  =  MatplotlibWidget ()
-widget1=MatplotlibWidget()
-buttonpass=widget1.button
-outputpass=widget1.output
-keyboardobj=keyboard()
-keyboardobj.loopkey(buttonpass, outputpass)
-keyboardobj.round()
-window.show()
-app . exec_()
+# window.show ()
+buttonpass=window.button
+outputpass=window.output
+keyboardobj=Keyboard()
+t = threading.Thread(target = keyboardobj.loopkey, args=(buttonpass,outputpass,1),daemon=True)
+w = threading.Thread(target=window.show())
+w.start()
+t.start()
+app . exec_ ()
