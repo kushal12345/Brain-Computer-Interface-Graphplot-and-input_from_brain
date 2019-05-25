@@ -9,7 +9,8 @@ import  numpy  as  np
 import  random
 from lineEdit import QLabel
 import time
-from keyboard import *
+from keyboard import Keyboard
+import threading
 #import mindwave, time, subprocess
 
 #headset = mindwave.Headset('')
@@ -374,13 +375,16 @@ class  MatplotlibWidget ( QMainWindow ):
 
         return self.animation_5
 
-
+    
 
 app  =  QApplication ([])
 window  =  MatplotlibWidget ()
-widget1=MatplotlibWidget()
-buttonpass=widget1.button
-outputpass=widget1.output
-keyboardobj=keyboard()
-keyboardobj.loopkey(buttonpass, outputpass)
-app . exec_()
+# window.show ()
+buttonpass=window.button
+outputpass=window.output
+keyboardobj=Keyboard()
+t = threading.Thread(target = keyboardobj.loopkey, args=(buttonpass,outputpass,1),daemon=True)
+w = threading.Thread(target=window.show())
+w.start()
+t.start()
+app . exec_ ()
